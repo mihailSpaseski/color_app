@@ -1,28 +1,20 @@
-import React, { useState } from 'react';
-import { SketchPicker } from 'react-color';
+import React from 'react';
 import './style.css';
-import { AiOutlinePlus, AiOutlineHeart } from 'react-icons/ai';
+
+interface Props {
+  color: string;
+  setColor: React.Dispatch<React.SetStateAction<string>>
+
+  handleAdd: (e: React.FormEvent) => void;
+}
 
 
-const InputField = () => {
-
-    const [hidden, setHidden] = useState(false);
-
-
+const InputField: React.FC<Props> = ({color, setColor, handleAdd}) => {
   return (
-    <form className='input'>
-        <span className="icon"> <AiOutlineHeart/> </span>
-        <input type="input" placeholder='Name for your color' className='input_box'/>
-        
-        <SketchPicker/>
-        <button onClick={() => setHidden(!hidden)}>Show/Hide</button>
-        
-        
-        <button type='submit' className='input_submit'>
-            <span className="icon">
-                <AiOutlinePlus/>
-            </span>
-        </button>
+    <form className='input' onSubmit={handleAdd}>
+        <input type="input" placeholder='Color name' className='input_box' />
+        <input type="color" value={color} onChange={(e) => setColor(e.target.value)} />
+        <button type='submit' className='input_submit'>+</button>
     </form>
   )
 }

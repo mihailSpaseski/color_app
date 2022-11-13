@@ -6,7 +6,7 @@ import AddToList from './components/AddToList';
 export interface IState {
   favouriteColor: {
     name: string
-    hexCode: string | number
+    hexCode: string
   }[]
 }
 
@@ -18,9 +18,11 @@ function App() {
     <div className="App">
       <p>My Favourite Colors</p>
 
-        <InputField nameColor={nameColor} />
-        <AddToList nameColor={nameColor} setNameColor={setNameColor}/>
-      
+      <AddToList nameColor={nameColor} setNameColor={setNameColor}/>
+
+
+      <InputField nameColor={nameColor} />
+
     </div>
   );
 }

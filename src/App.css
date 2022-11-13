@@ -1,4 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
 .App {
-  text-align: center;
+  text-align: left;
   font-size: 20px;
+  font-family: 'Montserrat';
+  margin: 10px;
+  position: static;
 }
+

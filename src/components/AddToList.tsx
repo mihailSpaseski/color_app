@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { IState as Props } from "../App"
-
-
+import './style.css';
 interface IProps {
     nameColor: Props['favouriteColor']
     setNameColor: React.Dispatch<React.SetStateAction<Props["favouriteColor"]>>
@@ -40,8 +39,9 @@ const AddToList: React.FC<IProps> = ({nameColor, setNameColor}) => {
 
 
   return (
-    <div className='AddToList-style'>
+    <div className='input'>
         <input 
+                className='input-box'
                 type="text"
                 onChange={handleChange}
                 name="name"
@@ -50,13 +50,14 @@ const AddToList: React.FC<IProps> = ({nameColor, setNameColor}) => {
             />
 
         <input 
+                className='pickerStyle'
                 type="color"
                 onChange={handleChange}
                 name="hexCode"
             />
 
             <button onClick={handleClick} className="AddToList-btn">
-                Add to List
+                +
             </button>
     </div>
   )

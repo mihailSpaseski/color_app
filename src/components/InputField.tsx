@@ -12,21 +12,18 @@ const InputField: React.FC<IProps> = ({nameColor}) => {
   const renderList = (): JSX.Element[] => {
     return nameColor.map((nameColor, index) => {
         return (
-            <li key={index}>
+            <div key={index}>
                 <div>
-                   <button></button>
-                    <h2>{nameColor.name}</h2>
-                    <h2>{nameColor.hexCode}</h2>
+                  <span className="colorBox" style={{backgroundColor: nameColor.hexCode}}></span>
+                  <span>{nameColor.name}</span>
                 </div>
-            </li>
+            </div>
         )
     })
 }
 
 return (
-  <ul>
-      {renderList()} 
-  </ul>
+      <div className='renderList'>{renderList()}</div> 
 )
 
 }

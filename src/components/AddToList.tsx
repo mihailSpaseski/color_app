@@ -10,19 +10,19 @@ const AddToList: React.FC<IProps> = ({nameColor, setNameColor}) => {
 
     const [input, setInput] = useState({
         name: '',
-        hexCode: ''
+        hexCode: '#000000'
     }) 
 
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setInput({
             ...input,
             [e.target.name]: e.target.value
         })
     }
 
-    const handleClick = () => {
-        if (!input.name || !input.hexCode) return
-
+    const handleClick = (e: any) => {
+        e.preventDefault();
+        if (!input.name ) return
         setNameColor([
             ...nameColor,
             {
@@ -33,13 +33,13 @@ const AddToList: React.FC<IProps> = ({nameColor, setNameColor}) => {
 
         setInput({
             name: '',
-            hexCode: ''
+            hexCode: input.hexCode
         })
     }
 
 
   return (
-    <div className='input'>
+    <form className='input'>
         <input 
                 className='input-box'
                 type="text"
@@ -59,7 +59,7 @@ const AddToList: React.FC<IProps> = ({nameColor, setNameColor}) => {
             <button onClick={handleClick} className="AddToList-btn">
                 +
             </button>
-    </div>
+    </form>
   )
 }
 

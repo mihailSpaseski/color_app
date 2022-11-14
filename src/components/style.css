@@ -1,7 +1,39 @@
+.input {
+    display: flex;
+    width: 100%;
+    position: relative;
+    align-items: center;
+}
+
+.input-box {
+    width: 100%;
+    height: 50px;
+    padding: 0;
+    border: none;
+    transition: 0.2s;
+    text-indent: 5px;
+    background-color: white;
+    border: solid 1px lightgray;
+}
+
+.pickerStyle {
+    position: relative;
+    width: 70px;
+    height: 50px;
+    margin-left: 0px;
+    padding: 0;
+    right: 0px;
+    border: none;
+    border: solid 1px lightgray;
+}
+
 .AddToList-btn {
-    margin: 10px 10px;
-    font-size: 100%;
-    padding: 4px 12px;
+    position: relative;
+    width: 80px;
+    height: 55px;
+    margin-left: 5px;
+    font-size: 35px;
+    padding: 0;
     background-color: #3C4043;
     color: white;
     box-shadow: none;
@@ -12,29 +44,24 @@
     background-color: darkgrey;
 }
 
-.input-box {
-    padding: 6px;
-
-    background-color: white;
-    border: 1px solid lightblue;
-    box-shadow: 10px 10px 8px #888888;
-}
-
-.pickerStyle {
-    margin: 0;
-    padding: 0;
-    width: 50px;
-    height: 50px;
-    border: none;
-    display: inline-block;
-}
-
 .colorBox {
+    padding: 0;
     margin: 20px;
-    padding: 5px 15px;
+    width: 25px;
+    height: 25px;
+
+}
+
+.nameDisplay {
+    margin: 20px;
 }
 
 .renderList {
-    margin: 10px;
-    padding: 50px;
+    margin: 0;
+    padding: 0;
+}
+
+span {  
+    display:inline-block;
+    vertical-align: text-top;
 }

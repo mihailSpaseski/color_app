@@ -15,17 +15,15 @@ const InputField: React.FC<IProps> = ({nameColor}) => {
             <div key={index}>
                 <div>
                   <span className="colorBox" style={{backgroundColor: nameColor.hexCode}}></span>
-                  <span>{nameColor.name}</span>
+                  <span className='nameDisplay'>{nameColor.name}</span>
                 </div>
             </div>
         )
     })
 }
-
-return (
+  return (
       <div className='renderList'>{renderList()}</div> 
-)
-
+  )
 }
 
 export default InputField

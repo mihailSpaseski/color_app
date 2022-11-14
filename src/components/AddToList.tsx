@@ -22,7 +22,8 @@ const AddToList: React.FC<IProps> = ({nameColor, setNameColor}) => {
 
     const handleClick = (e: any) => {
         e.preventDefault();
-        if (!input.name ) return
+        if (!input.name ) return ( console.log('Enter your color name!!') )
+
         setNameColor([
             ...nameColor,
             {

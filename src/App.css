@@ -8,3 +8,29 @@
   position: static;
 }
 
+.noItemTitle {
+  font-size: 16px;
+  text-align: center;
+}
+
+.noItemSubtitle {
+  font-size: 14px;
+  text-align: center;
+}
+
+.iconStyle {
+  display: flex;
+  width: 100%;
+  position: relative;
+  align-items: center;
+  text-align: center;
+}
+
+.iconInside {
+  position: relative;
+  width: 100%;
+  margin: 30px 30% 30px 30%;
+  border: solid 1px lightgrey;
+  align-items: center;
+  text-align: center;
+}

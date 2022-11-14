@@ -14,8 +14,9 @@ const InputField: React.FC<IProps> = ({nameColor}) => {
         return (
             <div key={index}>
                 <div>
-                  <span className="colorBox" style={{backgroundColor: nameColor.hexCode}}></span>
+                  <span className='colorBox' style={{backgroundColor: nameColor.hexCode}}></span>
                   <span className='nameDisplay'>{nameColor.name}</span>
+                  <span className='removeColor'><button className='removeColorBtn'>Remove color</button></span>
                 </div>
             </div>
         )

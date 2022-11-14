@@ -47,7 +47,7 @@ const AddToList: React.FC<IProps> = ({nameColor, setNameColor}) => {
                 onChange={handleChange}
                 name="name"
                 value={input.name}
-                placeholder="Color Name"
+                placeholder=" Color Name"
             />
 
         <input 

@@ -18,7 +18,7 @@ function App() {
   return (
     <div className="App">
 
-      <p>My Favourite Colors</p>
+      <p className='titleOfPage'>My Favourite Colors</p>
 
       <AddToList nameColor={nameColor} setNameColor={setNameColor}/>
       
@@ -31,7 +31,7 @@ function App() {
 
         <p className='noItemTitle'>Your collection is empty.</p> 
         <p className='noItemSubtitle'>Please add your favourite colors to make us happy.</p> 
-      </div> : null} 
+      </div> : <div> <p className='collection'>Color collection</p> </div>} 
       
       <InputField nameColor={nameColor} />
 

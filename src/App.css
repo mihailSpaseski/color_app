@@ -2,15 +2,22 @@
 
 .App {
   text-align: left;
-  font-size: 20px;
   font-family: 'Montserrat';
-  margin: 10px;
+  margin: 0;
   position: static;
+}
+
+.titleOfPage {
+  margin-left: 20px;
+  font-size: 20px;
+  font-weight: 700;
 }
 
 .noItemTitle {
   font-size: 16px;
   text-align: center;
+  font-weight: 700;
+  margin: ;
 }
 
 .noItemSubtitle {
@@ -24,13 +31,19 @@
   position: relative;
   align-items: center;
   text-align: center;
-}
+} 
 
 .iconInside {
   position: relative;
-  width: 100%;
-  margin: 30px 30% 30px 30%;
+  margin: 32px 174px;
+  padding: 30px;
   border: solid 1px lightgrey;
   align-items: center;
   text-align: center;
+}
+
+.collection {
+  font-size: 14px;
+  margin-left: 20px;
+  font-weight: 700;
 }

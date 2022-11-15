@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import './App.css';
 import InputField from './components/InputField';
-import AddToList from './components/AddToList';
+import ColorList from './components/ColorList';
 
 export interface IState {
   favouriteColor: {
     name: string
     hexCode: string
+    id: number
   }[]
 }
 
@@ -19,7 +20,7 @@ function App() {
 
       <p className='titleOfPage'>My Favourite Colors</p>
 
-      <AddToList nameColor={nameColor} setNameColor={setNameColor}/>
+      <InputField nameColor={nameColor} setNameColor={setNameColor}/>
       
       {nameColor.length === 0 ? <div>
         <div className='iconStyle'>
@@ -31,12 +32,17 @@ function App() {
 
           </div>
         </div>
+        
+        <div className='noItemsTextBox'>
 
-        <p className='noItemTitle'>Your collection is empty.</p> 
-        <p className='noItemSubtitle'>Please add your favourite colors to make us happy.</p> 
+          <p className='noItemTitle'>Your collection is empty!</p>
+          <p className='noItemSubtitle'>Please add your favourite colors to make us happy.</p> 
+        
+        </div>
+        
       </div> : <div> <p className='collection'>Color collection</p> </div>} 
       
-      <InputField nameColor={nameColor} />
+      <ColorList nameColor={nameColor} />
 
     </div>
   );

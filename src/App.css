@@ -15,13 +15,14 @@
 
 .noItemTitle {
   font-size: 16px;
-  text-align: center;
   font-weight: 700;
+  padding: 0px;
+  margin-left: 0px;
+  margin-top: 0px;
 }
 
 .noItemSubtitle {
   font-size: 14px;
-  text-align: center;
 }
 
 .iconStyle {
@@ -34,7 +35,7 @@
 
 .iconInside {
   position: relative;
-  margin: 32px 174px;
+  margin: 32px 174px 16px 174px;
   padding: 30px;
   border: solid 1px lightgrey;
   align-items: center;
@@ -45,4 +46,11 @@
   font-size: 14px;
   margin-left: 20px;
   font-weight: 700;
+}
+
+.noItemsTextBox {
+  width: 259px;
+  height: 44px;
+  margin-left: 90.5px;
+  text-align: center;
 }

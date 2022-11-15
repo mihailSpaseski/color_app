@@ -67,14 +67,13 @@
 
 .colorBox {
     padding: 0;
-    margin-left: 20px;
+    margin: 10px 10px 10px 20px;
     width: 28px;
     height: 28px;
     font-size: 14px;
 }
 
 .nameDisplay {
-    margin-left: 10px;
     font-size: 14px;
 }
 
@@ -85,7 +84,7 @@
 
 span {  
     display:inline-block;
-    vertical-align: text-top;
+    vertical-align: middle;
 }
 
 .removeColor {

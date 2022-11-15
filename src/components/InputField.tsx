@@ -8,12 +8,12 @@ interface IProps {
     setNameColor: React.Dispatch<React.SetStateAction<Props["favouriteColor"]>>
 }
 
-const InputField: React.FC<IProps> = ({nameColor, setNameColor}) => {
+export const InputField: React.FC<IProps> = ({nameColor, setNameColor}) => {
 
     const [input, setInput] = useState({
         name: '',
         hexCode: '#000000',
-        id: Date.now()
+        id: 0
     }) 
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {

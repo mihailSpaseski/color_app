@@ -2,13 +2,12 @@ import React from 'react';
 import './style.css';
 import { IState as Props } from '../App';
 
-
 interface IProps {
   nameColor: Props['favouriteColor']
 }
 
-const handleDelete = (hexCode: string) => {
-
+const handleDelete = (id: number) => {
+  console.log(id)
 }
 
 const ColorList: React.FC<IProps> = ({nameColor}) => {
@@ -20,7 +19,10 @@ const ColorList: React.FC<IProps> = ({nameColor}) => {
                 <div>
                   <span className='colorBox' style={{backgroundColor: nameColor.hexCode}}></span>
                   <span className='nameDisplay'>{nameColor.name}</span>
-                  <span className='removeColor'><button onClick={() => handleDelete(nameColor.hexCode)} className='removeColorBtn'>Remove color</button></span>
+                  <span className='removeColor'>
+                    <button onClick={() => handleDelete(nameColor.id)} className='removeColorBtn'>
+                      Remove color</button>
+                    </span>
                 </div>
             </div>
         )

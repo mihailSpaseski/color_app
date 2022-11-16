@@ -1,17 +1,22 @@
 import React from 'react';
 import './style.css';
 import { IState as Props } from '../App';
+import { sendData } from './SimulateRequest';
 
 interface IProps {
-  nameColor: Props['favouriteColor']
+  nameColor: Props['favouriteColor'],
+  setNameColor: React.Dispatch<React.SetStateAction<Props["favouriteColor"]>>
 }
 
-const handleDelete = (id: number) => {
-  console.log(id)
-}
+const ColorList: React.FC<IProps> = ({nameColor, setNameColor}) => {
 
-const ColorList: React.FC<IProps> = ({nameColor}) => {
+  const handleDelete = async (index: number) => {
 
+    await sendData('DELETE',{}) 
+    setNameColor(nameColor.filter((e,key) => key !== index))
+
+  }
+ 
   const renderList = (): JSX.Element[] => {
     return nameColor.map((nameColor, index) => {
         return (
@@ -20,7 +25,7 @@ const ColorList: React.FC<IProps> = ({nameColor}) => {
                   <span className='colorBox' style={{backgroundColor: nameColor.hexCode}}></span>
                   <span className='nameDisplay'>{nameColor.name}</span>
                   <span className='removeColor'>
-                    <button onClick={() => handleDelete(nameColor.id)} className='removeColorBtn'>
+                    <button onClick={() => handleDelete(index)} className='removeColorBtn'>
                       Remove color</button>
                     </span>
                 </div>

@@ -3,6 +3,7 @@ import './App.css';
 import InputField from './components/InputField';
 import ColorList from './components/ColorList';
 
+
 export interface IState {
   favouriteColor: {
     name: string
@@ -42,7 +43,7 @@ function App() {
         
       </div> : <div> <p className='collection'>Color collection</p> </div>} 
       
-      <ColorList nameColor={nameColor} />
+      <ColorList nameColor={nameColor} setNameColor={setNameColor}/>
 
     </div>
   );

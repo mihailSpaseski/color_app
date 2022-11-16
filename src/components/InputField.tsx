@@ -1,4 +1,4 @@
-import React, { useState, ReactElement } from 'react';
+import React, { useState } from 'react';
 import { IState as Props } from "../App";
 import './style.css';
 
@@ -57,7 +57,7 @@ const InputField: React.FC<IProps> = ({nameColor, setNameColor}) => {
                 onChange={handleChange}
                 name="name"
                 value={input.name}
-                placeholder={ svgHeart + ' Color name' }
+                placeholder={ svgHeart + 'Color name' }
             />
         <div className='pickerDiv'>
         <input 
@@ -68,7 +68,6 @@ const InputField: React.FC<IProps> = ({nameColor, setNameColor}) => {
             />
         </div>
         
-
             <button onClick={handleClick} className="AddToList-btn">
                 +
             </button>
